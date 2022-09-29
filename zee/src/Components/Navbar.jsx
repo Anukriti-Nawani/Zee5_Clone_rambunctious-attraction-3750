@@ -55,7 +55,7 @@ function Navbar() {
 //    }
 
    return (
-      <Flex gap={7} p={5} align="center" position="sticky" top='0' zIndex='7' borderBottom='1px solid rgb(27, 27, 27)' bg='rgb(15, 6, 23)'>
+      <Flex gap={7} p={5} align="center" position="sticky" top='0' zIndex='7' borderBottom='1px solid rgb(27, 27, 27)' bg='rgb(15, 6, 23)' mt="-2rem">
          <Image h='47px' src='https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.15' alt='app logo' mr={4} />
          <NavLink to="/" style={({ isActive }) => isActive ? activeStyle : baseStyle}>Home</NavLink>
          <NavLink to="/tvShows" style={({ isActive }) => isActive ? activeStyle : baseStyle}>TV Shows</NavLink>

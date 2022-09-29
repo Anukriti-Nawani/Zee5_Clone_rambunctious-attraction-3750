@@ -1,0 +1,212 @@
+
+.container {
+    /* display: grid;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: auto; */
+    
+}
+
+.Top10onZEE5Hindi {
+    border: 5px solid red;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.boxforsectiontitle{
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    margin: auto;
+    /* background-color: brown; */
+}
+.sectiontitle{
+    color: whitesmoke;
+    font-family: sans-serif;
+    /* border: 2px solid blue; */
+}
+.sectionmore{
+    color: whitesmoke;
+}
+
+/* .sectioncontent{
+    width: 92%;
+    height: 310px;
+  
+    margin: auto;
+   display: flex;
+   justify-content: flex-start;
+    gap:10px;
+    overflow: scroll;
+    border: 1px solid blue;
+
+}  */
+
+.Sectioncards{
+    position: relative;
+}
+.Sectioncardscrown{
+    position: absolute;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+.sectoncardstitle{
+    margin-top: 4px;
+    padding-left: 15px;
+    margin-bottom: -1px;
+    font-size: 12px;
+    color: rgb(63, 60, 60);
+}
+.Sectioncardsbottom{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    color: rgb(68, 68, 68);
+    font-weight: 100;
+    width: 100%;
+    /* border:2px solid blue; */
+    margin-top: -50px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+
+.customslider {
+    /* width: 96%;
+    margin: auto; */
+    /* background-color: aquamarine; */
+    /* padding-top: 50px; */
+    /* gap: 15px; */
+    border: 2px solid black;
+    width: 100%;
+    height: 310px;
+  
+    margin: auto;
+   display: flex;
+   /* justify-content: flex-start; */
+    /* gap:10px; */
+    /* overflow: scroll; */
+    /* border: 1px solid blue; */
+}
+
+/* .slick-prev::before, .slick-next::before{
+     color:blue 
+} */
+
+ .Sectioncards {
+    /* height: 310px; */
+    padding-top: 25px;
+    width: 70%;
+    /* padding: 5px 5px 5px 5px; */
+    /* border: 2px solid blue; */
+    margin-top: -5px;
+    gap: 15px;
+    margin: auto;
+    margin-left: 10px;
+
+}
+.customslider .Sectioncardstvepisodes{
+    height: 190px;
+    padding-top: 25px;
+    /* padding: 5px 5px 5px 5px; */
+    /* border: 2px solid blue; */
+    margin-top: -5px;
+    gap: 15px;
+    margin-bottom: -150px;
+    margin: auto;
+    margin-left: 10px;
+
+}
+
+
+    .customslider .Sectioncardstvepisodes:hover {
+    height: 390px;
+    transform: scale(1.2);
+    width: 150%;
+    /* height: 150%; */
+    z-index: 2;
+}
+.customslider .Sectioncards .Sectioncardsthumbnail {
+
+
+    margin: auto;
+    width: 100%;
+    height: 94%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 2px solid blue;
+
+}
+
+.customslider .Sectioncards:hover {
+    height: 390px;
+    transform: scale(1.2);
+    width: 150%;
+    height: 150%;
+    z-index: 2;
+}
+
+.sectionmore {
+
+    color: rgb(162, 129, 249);
+    font-size: 20px;
+}
+
+
+/* slider arrow*/
+.imageslider {
+    width: 84%;
+    height: 410px;
+    /* background-color: rgb(15,6,23); */
+    /* background-color:blanchedalmond; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: whitesmoke;
+    font-family: sans-serif;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.boxforsectiontitle{
+    margin-bottom: -60px;
+}
+
+.leftarrow {
+    /* background-color: aquamarine; */
+    font-size: 40px;
+    font-weight: 700;
+    color: red;
+    transform: rotate(45deg);
+}
+
+.rightarrow {
+    /* background-color: aqua; */
+    font-size: 40px;
+    font-weight: 900;
+    color: red;
+    transform: rotate(225deg);
+}
+
+.appendimage {
+    /* border: 2px solid red; */
+    /* width: 95%;
+    height: 400px;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ; */
+}
+
+.slidesAll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    margin: 0 15px;
+}

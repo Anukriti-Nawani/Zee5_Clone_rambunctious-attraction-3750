@@ -1,30 +1,34 @@
-import { Box, Button, Flex, HStack, Input, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Input, Text, VStack,Link } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { DiApple } from "react-icons/di";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AppContext } from "../Context/AppContext";
+import LoginOtp from "./LoginOtp";
+import Navbar from "../Components/Navbar";
 
 function Login() {
-   const navigate = useNavigate();
-   const { data, setIsLogin } = useContext(AppContext);
-   const [text, setText] = useState({ email: '', password: '' });
+    const navigate = useNavigate();
+    const { setData,setOtp } = useContext(AppContext);
+    const [text, setText] = useState({ email: ''});
 
-   const handleLogin = () => {
-      if (text.email === data.email && text.password === data.password) {
-         setIsLogin(true);
-         alert('Login Successful');
-         navigate('/');
-      } else {
-         alert('Invalid Credentials');
-         setText({ email: '', password: '' });
-      }
+   const handleSignup = () => {
+      const val = Math.floor(1000 + Math.random() * 9000);
+      alert ("Your One time Pin is"+"\n"+val);
+      setData({ email: text.email});
+      setText({ email: ''});
+      setOtp(val)
+      goToOtp();
    }
 
-   const goToSignup = () => { navigate('/signup') }
+   const goToOtp = () => { navigate('/loginotp') }
+   const goToSignUp = () => { navigate('/signup') }
 
    return (
+    <>
+
+    <Navbar />
       <Box mb={7}>
          <Text fontSize="xl" fontWeight="bold" lineHeight='3em'>Login to ZEE5</Text>
          <Text lineHeight="1.2em" color='gray'>Login to continue enjoying uninterrupted video and <br /> personalised experience</Text>
@@ -43,16 +47,19 @@ function Login() {
                   <FaTwitter style={{ fontSize: '1.2rem' }} />
                </Flex>
             </HStack>
-            <Button bg='rgb(69, 9, 71)' _hover='rgb(69, 9, 71)' borderRadius={100} h='44px' w='44px' fontWeight='bold' pb={1}>or</Button>
+            <Button bg='rgb(69, 9, 71)' _hover='rgb(69, 9, 71)' borderRadius={100} h='44px' w='44px' fontWeight='bold' pb={1}color="white">or</Button>
          </VStack>
          <VStack gap={4}>
-            <Input type='email' autoFocus={true} value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail' w='333px' />
-            <Input type='password' value={text.password} onChange={(event) => setText({ ...text, password: event.target.value })} variant='flushed' borderColor='rgb(111, 111, 111)' focusBorderColor='rgb(176, 80, 255)' placeholder='Password' w='333px' />
-            <Text fontSize='sm' color='rgb(176, 80, 255)'>Forgot Password?</Text>
-            <Button disabled={text.email === '' || text.password === ''} onClick={handleLogin} w='333px' h='47px' variant='outline' borderColor='rgb(111, 111, 111)' _hover="transparent" color='gray'>Login</Button>
-            <Text fontSize='sm' color='lightgray'>New to ZEE5? <span onClick={goToSignup}>Register</span></Text>
+         <Input value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} type='email' variant='flushed' borderColor='rgb(111, 111, 111)' color="black" focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail or mobile number' w='333px' />
+            
+               <Link color="purple">Forgot Password</Link>
+           
+            <Button  onClick={handleSignup} w='333px' h='47px' variant='outline' borderColor='rgb(111, 111, 111)' _hover="transparent" color='gray'>Login</Button>
+            <Text fontSize='sm' color='gray'>New to ZEE5?<Link to="/signup" onClick={goToSignUp} color="purple">Register</Link></Text>
          </VStack>
       </Box>
+
+      </>
    );
 }
 

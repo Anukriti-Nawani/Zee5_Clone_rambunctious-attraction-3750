@@ -3,7 +3,8 @@ import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
-import Otp from "./Otp";
+import SignUpOtp from "./SignupOtp";
+import Navbar from "../Components/Navbar";
 
 // function Signup() {
 //    const navigate = useNavigate();
@@ -41,7 +42,7 @@ function Signup() {
       goToOtp();
    }
 
-   const goToOtp = () => { navigate('/Otp') }
+   const goToOtp = () => { navigate('/signupotp') }
 
 return (
         <>         
@@ -52,7 +53,7 @@ return (
        
        
         <p>forgot password</p> */}
-
+ <Navbar />
 
         <Box mb={7} height="100%">
          <Text fontSize="xl" fontWeight="bold" lineHeight='3em'>Create a new account</Text>
@@ -64,7 +65,7 @@ return (
             <Button bg='rgb(69, 9, 71)' _hover='rgb(69, 9, 71)' borderRadius={100} h='44px' w='44px' fontWeight='bold' pb={1} color="white">or</Button>
          </VStack>
          <VStack gap={3}>
-         <Input value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} type='email' variant='flushed' borderColor='rgb(111, 111, 111)' color="black" focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail' w='333px' />
+         <Input value={text.email} onChange={(event) => setText({ ...text, email: event.target.value })} type='email' variant='flushed' borderColor='rgb(111, 111, 111)' color="black" focusBorderColor='rgb(176, 80, 255)' placeholder='E-mail or mobile number' w='333px' />
             <Text fontSize='sm' color='gray'>
                By proceeding you agree to our <Link color="purple">Terms of Service</Link> & <br /><Link color="purple">Privacy Policy</Link>
             </Text>
