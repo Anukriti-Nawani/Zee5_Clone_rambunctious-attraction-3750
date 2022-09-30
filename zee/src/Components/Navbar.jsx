@@ -117,7 +117,7 @@ function Navbar() {
 
 
 <NavLink className={styles.nav} to="/login">Login</NavLink>
-<NavLink className={styles.buy} to="/login">BUY PLAN</NavLink>
+<NavLink className={styles.buy} to="/buyplan">BUY PLAN</NavLink>
 
 
     
@@ -141,7 +141,7 @@ function Navbar() {
           <Text className={styles.grey}> Explore<ChevronDownIcon className={styles.iconArrow}/></Text>
           <Divider />
           <Text className={styles.grey}> Plans <ChevronUpIcon className={styles.iconArrowUpP}/></Text>
-          <Text className={styles.white}> Buy Plan</Text>
+          <Link className={styles.white} > Buy Plan</Link>
           <Text className={styles.white}> Have a prepaid code ?</Text>
 
           <Divider />

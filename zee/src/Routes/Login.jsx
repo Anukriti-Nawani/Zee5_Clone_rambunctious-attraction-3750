@@ -30,7 +30,7 @@ function Login() {
 
     <Navbar />
       <Box mb={7}>
-         <Text fontSize="xl" fontWeight="bold" lineHeight='3em'>Login to ZEE5</Text>
+         <Text fontSize="xl" fontWeight="bold" lineHeight='3em' marginTop="2rem">Login to ZEE5</Text>
          <Text lineHeight="1.2em" color='gray'>Login to continue enjoying uninterrupted video and <br /> personalised experience</Text>
          <VStack gap={7} mt={7} mb={4}>
             <HStack gap={4}>

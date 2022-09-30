@@ -9,6 +9,7 @@ import TVShows from "./TVShows";
 import SignUpOtp from "./SignupOtp";
 import PrivateRoute from "../Components/PrivateRoute";
 import LoginOtp from "./LoginOtp";
+import BuyPLan from "./BuyPlan";
 
 function AllRoutes() {
    return (
@@ -23,6 +24,7 @@ function AllRoutes() {
          <Route path="/signupotp" element={<SignUpOtp />} />
          <Route path="/tvShows" element={<TVShows />} />
          <Route path="/movies" element={<Movies />} />
+         <Route path="/buyplan" element={<BuyPLan />} />
       </Routes>
      
    );
