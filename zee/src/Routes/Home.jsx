@@ -4,7 +4,12 @@ import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Slideshow from '../Components/SlideShow'
 // import LatestMovies from '../Components/LatestMovies';
-import LatestMovies from '../Components/lastesteTest';
+import LatestMovies from '../Components/LastestTest';
+import TopTenMovies from '../Components/TopTenMovies';
+import LeadingLadies from '../Components/LeadingLadies';
+import IMDBTopPicks from '../Components/IMDBTopPicks';
+import OriginalWeb from '../Components/OriginalWeb';
+import PremiumBollywood from '../Components/PremiumBollywood';
 
 const Home = () => {
   return (
@@ -13,6 +18,11 @@ const Home = () => {
    <Slideshow />
    {/* <LatestMovies /> */}
    <LatestMovies/>
+   <TopTenMovies />
+   <LeadingLadies/>
+   <IMDBTopPicks />
+   <OriginalWeb />
+   <PremiumBollywood />
    <Footer />
   
 

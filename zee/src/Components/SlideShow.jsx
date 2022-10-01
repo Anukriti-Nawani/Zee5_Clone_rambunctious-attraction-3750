@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaCrown, FaPlay } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
+import { NavLink } from "react-router-dom";
 import styles from "../Style/Slider.module.css";
 
 
@@ -42,9 +43,9 @@ function Slideshow() {
                      <button className={styles.sliderwatchbtn}>
                         <FaPlay /> WATCH
                      </button>
-                     <button className={styles.sliderbuybtn}>
+                     <NavLink to="/buyplan"className={styles.sliderbuybtn}>
                         <FaCrown /> BUY PLAN
-                     </button>
+                     </NavLink>
                      <span className={styles.slideritemtitle}>{item.title}</span>
                   </div>
                )

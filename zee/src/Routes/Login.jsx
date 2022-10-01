@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Input, Text, VStack,Link } from "@chakra-ui/react";
+import { Box, Button, Flex, HStack, Input, Text, VStack,Link ,WrapItem,Wrap,useToast} from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { DiApple } from "react-icons/di";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
@@ -13,14 +13,51 @@ function Login() {
     const { setData,setOtp } = useContext(AppContext);
     const [text, setText] = useState({ email: ''});
 
+    const toast = useToast()
+
    const handleSignup = () => {
       const val = Math.floor(1000 + Math.random() * 9000);
-      alert ("Your One time Pin is"+"\n"+val);
+      // alert ("Your One time Pin is"+"\n"+val);
+      
+      
+      toast({
+         title: `Your One time Pin is ${val}`,
+         position: 'top',
+         isClosable: true
+       })
+
+
+
+
+
       setData({ email: text.email});
       setText({ email: ''});
       setOtp(val)
       goToOtp();
+     
    }
+
+
+   // function PositionExample() {
+   //    const toast = useToast()
+     
+    
+   //    return (
+   //       <Wrap>
+   //                 toast({
+   //                   title: "top toast",
+   //                   position: 'top',
+   //                   isClosable: true
+   //                 })
+                  
+   //       </Wrap>
+   //     )
+   //  }
+
+
+
+
+
 
    const goToOtp = () => { navigate('/loginotp') }
    const goToSignUp = () => { navigate('/signup') }
