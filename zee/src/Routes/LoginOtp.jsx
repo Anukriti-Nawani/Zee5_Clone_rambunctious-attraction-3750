@@ -1,25 +1,47 @@
 import React, { useContext } from 'react'
-import { PinInput, PinInputField,HStack, Box, Text, Button } from '@chakra-ui/react'
+import { PinInput, PinInputField,HStack, Box, Text, Button,useToast } from '@chakra-ui/react'
 import { useState } from 'react'
 import { AppContext } from '../Context/AppContext'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../Components/Navbar'
+import { IoIosLogIn } from 'react-icons/io'
 
 const LoginOtp = () => {
     const navigate = useNavigate()
     const [pinNumber, setPinNumber] = useState()
-    const {otp} = useContext(AppContext);
+    const {otp,setIsLogin} = useContext(AppContext);
+
+    const toast = useToast()
+    
 
     
 function handleOtp() {
+
+
 // setPinNumber()
 // console.log(otp)
 if(pinNumber == otp) {
-    alert("Login Successful");
-    // <navigate to="/"/>
+  setIsLogin(true)
+  
+    toast({
+      title: `Welcome`,
+      description: "Login Successful",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
+
+
+
   navigate('/') 
 }else {
-    alert("Wrong OTP")
+    // alert("Wrong OTP")
+
+    toast({
+      title: `Wrong OTP`,
+      status: "error",
+      isClosable: true,
+    })
 }
 
 // pinNumber == otp ? alert("SignUp Successful"): alert("Wrong OTP")

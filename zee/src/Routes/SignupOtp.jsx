@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { PinInput, PinInputField,HStack, Box, Text, Button } from '@chakra-ui/react'
+import { PinInput, PinInputField,HStack, Box, Text, Button,useToast } from '@chakra-ui/react'
 import { useState } from 'react'
 import { AppContext } from '../Context/AppContext'
 import { Link, useNavigate } from 'react-router-dom'
@@ -9,18 +9,37 @@ const SignUpOtp = () => {
     const navigate = useNavigate()
     const [pinNumber, setPinNumber] = useState()
     const {otp} = useContext(AppContext);
+
+    const toast = useToast()
+
+
+
 function handleOtp() {
 // setPinNumber()
 // console.log(otp)
 if(pinNumber == otp) {
-    alert("SignUp Successful");
+  
+
+    toast({
+      title: 'Account created.',
+      description: "We've created your account for you.",
+      status: 'success',
+          duration: 9000,
+          isClosable: true,
+    })
+
+
+    
     // <navigate to="/"/>
   navigate('/login') 
 }else {
-    alert("Wrong OTP")
+  toast({
+    title: `Wrong OTP`,
+    status: "error",
+    isClosable: true,
+  })
 }
 
-// pinNumber == otp ? alert("SignUp Successful"): alert("Wrong OTP")
 
 
 }

@@ -16,8 +16,8 @@ function AllRoutes() {
     
     
       <Routes>
-         {/* <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} /> */}
-         <Route path="/" element={<Home /> }/>
+         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+         {/* <Route path="/" element={/> }/><Home  */}
          <Route path="/login" element={<Login />} />
          <Route path="/loginotp" element={<LoginOtp />} />
          <Route path="/signup" element={<Signup />} />
