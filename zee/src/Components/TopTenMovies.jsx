@@ -9,16 +9,13 @@ import "swiper/css";
 import { FaPlay, FaShareAlt } from "react-icons/fa";
 import { Box, Text, HStack } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import Navbar from "../Components/Navbar";
-import Slideshow from "../Components/SlideShow";
-import Footer from "../Components/Footer";
-import MoviesOne from "./MoviesOne";
+import { NavLink } from "react-router-dom";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-function Movies() {
-  const getData = (id) => {
-    return axios.get(`http://localhost:5000/data`);
+function TopTenMovies() {
+  const getData = () => {
+    return axios.get("https://json-server-mock-api-all.herokuapp.com/zeeTop10");
   };
   const [data, getdatafromApi] = React.useState([]);
 
@@ -29,16 +26,13 @@ function Movies() {
 
   return (
     <>
-      <Navbar />
-      <Slideshow />
-
-      <Text className={styles.more}>
-        More
-        <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
-      </Text>
-      <Text className={styles.latestTen} width="26%">
-        Exclusive Movies On ZEE5
-      </Text>
+      <NavLink to="/movies">
+        <Text className={styles.more}>
+          More
+          <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
+        </Text>
+      </NavLink>
+      <Text className={styles.latestTen}>Top 10 in India</Text>
 
       <div className={styles.outer}>
         <Swiper
@@ -54,7 +48,7 @@ function Movies() {
             <SwiperSlide className={styles.movies} key={item.id}>
               <div className={styles.mainlatest}>
                 <div>
-                  <img src={item.image} className={styles.image} />
+                  <img src={item.url} className={styles.image} />
                 </div>
 
                 <div className={styles.share}>
@@ -72,7 +66,7 @@ function Movies() {
                   {/* title */}
                   <Box className={styles.title}>
                     <HStack>
-                      <Text>{item.title}</Text>
+                      <Text>{item.popupTitle}</Text>
                     </HStack>
                   </Box>
                 </div>
@@ -81,10 +75,8 @@ function Movies() {
           ))}
         </Swiper>
       </div>
-      <MoviesOne />
-      <Footer />
     </>
   );
 }
 
-export default Movies;
+export default TopTenMovies;
