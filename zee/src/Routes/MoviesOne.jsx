@@ -14,7 +14,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function MoviesOne() {
   const getData = (id) => {
-    return axios.get(`http://localhost:5000/data1`);
+    return axios.get(`https://zee5-clone.herokuapp.com/cities`);
   };
   const [data, getdatafromApi] = React.useState([]);
 
