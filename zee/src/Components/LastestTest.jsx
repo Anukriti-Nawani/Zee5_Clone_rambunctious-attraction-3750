@@ -28,13 +28,14 @@ function LatestMovies() {
 
   return (
     <>
-    <NavLink to="/movies"><Text className={styles.more}>
-        More
-        <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
-      </Text></NavLink>
+      <NavLink to="/movies">
+        <Text className={styles.more}>
+          More
+          <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
+        </Text>
+      </NavLink>
       <Text className={styles.latest}>Latest Movies on ZEE5</Text>
-     
-     
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}
@@ -67,7 +68,6 @@ function LatestMovies() {
                   {/* title */}
                   <Box className={styles.title}>
                     <HStack>
-                    
                       <Text>{item.popupTitle}</Text>
                     </HStack>
                   </Box>

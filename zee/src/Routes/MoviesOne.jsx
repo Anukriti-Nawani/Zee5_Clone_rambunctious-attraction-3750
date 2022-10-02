@@ -10,14 +10,11 @@ import { FaPlay, FaShareAlt } from "react-icons/fa";
 import { Box, Text, HStack } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
-
-
-
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function MoviesOne() {
   const getData = (id) => {
-    return axios.get( `http://localhost:5000/data1`);
+    return axios.get(`http://localhost:5000/data1`);
   };
   const [data, getdatafromApi] = React.useState([]);
 
@@ -28,15 +25,12 @@ function MoviesOne() {
 
   return (
     <>
-
-
-
-    <Text className={styles.more}>
+      <Text className={styles.more}>
         More
         <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
       </Text>
       <Text className={styles.latestTen}> ZEE Animation</Text>
-     
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}
@@ -78,10 +72,6 @@ function MoviesOne() {
           ))}
         </Swiper>
       </div>
-
-      
-
-    
     </>
   );
 }

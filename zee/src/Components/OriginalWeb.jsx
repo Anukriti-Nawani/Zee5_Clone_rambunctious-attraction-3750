@@ -15,7 +15,9 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function OriginalWeb() {
   const getData = () => {
-    return axios.get("https://json-server-mock-api-all.herokuapp.com/zeeOriginalWebSeries");
+    return axios.get(
+      "https://json-server-mock-api-all.herokuapp.com/zeeOriginalWebSeries"
+    );
   };
   const [data, getdatafromApi] = React.useState([]);
 
@@ -26,12 +28,14 @@ function OriginalWeb() {
 
   return (
     <>
-    <NavLink to="/movies"><Text className={styles.more}>
-        More
-        <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
-      </Text></NavLink>
+      <NavLink to="/movies">
+        <Text className={styles.more}>
+          More
+          <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
+        </Text>
+      </NavLink>
       <Text className={styles.original}>ZEE5 Original Web Series</Text>
-     
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}

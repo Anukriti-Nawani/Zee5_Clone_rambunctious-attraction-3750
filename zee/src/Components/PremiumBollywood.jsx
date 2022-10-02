@@ -9,7 +9,7 @@ import "swiper/css";
 import { FaPlay, FaShareAlt } from "react-icons/fa";
 import { Box, Text, HStack } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -26,12 +26,14 @@ function PremiumBollywood() {
 
   return (
     <>
-    <NavLink to="/movies"><Text className={styles.more}>
-        More
-        <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
-      </Text></NavLink>
+      <NavLink to="/movies">
+        <Text className={styles.more}>
+          More
+          <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
+        </Text>
+      </NavLink>
       <Text className={styles.premium}>Premium Bollywood Blockbusters</Text>
-     
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}

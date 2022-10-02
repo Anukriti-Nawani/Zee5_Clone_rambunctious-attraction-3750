@@ -26,12 +26,14 @@ function TopTenMovies() {
 
   return (
     <>
-    <NavLink to="/movies"><Text className={styles.more}>
-        More
-        <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
-      </Text></NavLink>
+      <NavLink to="/movies">
+        <Text className={styles.more}>
+          More
+          <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
+        </Text>
+      </NavLink>
       <Text className={styles.latestTen}>Top 10 in India</Text>
-     
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}

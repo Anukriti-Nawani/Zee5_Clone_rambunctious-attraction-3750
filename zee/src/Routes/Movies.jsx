@@ -9,18 +9,16 @@ import "swiper/css";
 import { FaPlay, FaShareAlt } from "react-icons/fa";
 import { Box, Text, HStack } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import Navbar from '../Components/Navbar'
+import Navbar from "../Components/Navbar";
 import Slideshow from "../Components/SlideShow";
-import Footer from '../Components/Footer';
+import Footer from "../Components/Footer";
 import MoviesOne from "./MoviesOne";
-
-
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 function Movies() {
   const getData = (id) => {
-    return axios.get( `http://localhost:5000/data`);
+    return axios.get(`http://localhost:5000/data`);
   };
   const [data, getdatafromApi] = React.useState([]);
 
@@ -31,16 +29,17 @@ function Movies() {
 
   return (
     <>
+      <Navbar />
+      <Slideshow />
 
-<Navbar />
-<Slideshow />
-
-    <Text className={styles.more}>
+      <Text className={styles.more}>
         More
         <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
       </Text>
-      <Text className={styles.latestTen} width="26%">Exclusive Movies On ZEE5</Text>
-     
+      <Text className={styles.latestTen} width="26%">
+        Exclusive Movies On ZEE5
+      </Text>
+
       <div className={styles.outer}>
         <Swiper
           className={styles.swiper}
