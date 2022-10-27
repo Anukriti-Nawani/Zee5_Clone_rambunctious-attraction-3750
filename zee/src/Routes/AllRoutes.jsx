@@ -15,9 +15,9 @@ function AllRoutes() {
       <Route
         path="/"
         element={
-          <PrivateRoute>
+        
             <Home />
-          </PrivateRoute>
+         
         }
       />
       <Route path="/login" element={<Login />} />
@@ -25,8 +25,8 @@ function AllRoutes() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/signupotp" element={<SignUpOtp />} />
       <Route path="/tvShows" element={<TVShows />} />
-      <Route path="/movies" element={<Movies />} />
-      <Route path="/buyplan" element={<BuyPLan />} />
+      <Route path="/movies" element={<PrivateRoute><Movies /></PrivateRoute>} />
+      <Route path="/buyplan" element={<PrivateRoute><BuyPLan /></PrivateRoute>} />
     </Routes>
   );
 }

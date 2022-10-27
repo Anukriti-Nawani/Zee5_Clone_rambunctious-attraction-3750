@@ -133,3 +133,31 @@
 .dropdown:hover .dropdownContent {
   display: block;
 }
+
+
+@media screen and (max-width: 700px ) {
+  .search {
+    display: none;
+  }
+
+  /* .Flex {
+    gap: 20px;
+  } */
+  .dropdown {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px ) {
+  .search {
+    display: none;
+  }
+
+.nav {
+  display: none;
+}
+.dropdown {
+  display: none;
+}
+}
+  

@@ -33,6 +33,14 @@ function MoviesOne() {
 
       <div className={styles.outer}>
         <Swiper
+          breakpoints={{
+            701: {
+              slidesPerView:6,
+            },
+            700: {
+              slidesPerView: 3,
+            },
+          }}
           className={styles.swiper}
           spaceBetween={0.5}
           slidesPerView={6}

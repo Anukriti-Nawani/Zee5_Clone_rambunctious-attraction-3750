@@ -7,6 +7,8 @@
   gap: 36px;
   position: relative;
   cursor: pointer;
+  /* border: 2px solid red; */
+  
 }
 
 .slider::-webkit-scrollbar {
@@ -78,4 +80,11 @@
   background: linear-gradient(40deg, #a785ff 35%, lightgray 55%);
   background-clip: text;
   -webkit-text-stroke: 4px transparent;
+}
+@media screen and (max-width: 700px ) and (min-width: 500px) {
+
+  .slider {
+    width: 100vw;
+    height: 40vh
+  };
 }

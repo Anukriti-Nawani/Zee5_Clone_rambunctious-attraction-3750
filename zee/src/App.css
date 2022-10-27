@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -52,6 +58,7 @@ background-color: black !important;
   margin-left: 34rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
 }
 .verify {
   background-color: black;
@@ -93,4 +100,24 @@ background-color: black !important;
 
 .arrow.right {
   right: 50px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .pincode {
+    margin-left: 22rem;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .pincode {
+    margin-left: 16rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pincode {
+    margin-left: 10rem;
+  }
 }

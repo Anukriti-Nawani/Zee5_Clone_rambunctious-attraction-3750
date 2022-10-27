@@ -19,14 +19,14 @@ function Footer() {
       color="lightgray"
       backgroundColor="black"
     >
-      <HStack gap={3}>
-        <Text className={styles.footer} fontWeight="bold">
+      <HStack gap={[2]}>
+        <Text className={styles.footer} fontWeight="bold" fontSize={["sx","sm","md"]}>
           Download Apps
         </Text>
         <Image src="https://www.zee5.com/images/play_store.png?ver=2.52.15" />
         <Image src="https://www.zee5.com/images/app_store.png?ver=2.52.15" />
         <Spacer />
-        <Text className={styles.footer} fontWeight="bold">
+        <Text className={styles.footer} fontWeight="bold" fontSize={["sx","sm","md"]}>
           Connect with us
         </Text>
         <HStack gap={1}>
@@ -35,10 +35,11 @@ function Footer() {
             bg="rgb(34, 26, 41)"
             p={3}
             borderRadius="50%"
+            className={styles.gayab}
           >
-            <FaFacebook />
+            <FaFacebook  />
           </Button>
-          <Button color="#f24b8f" bg="rgb(34, 26, 41)" p={3} borderRadius="50%">
+          <Button color="#f24b8f" bg="rgb(34, 26, 41)" p={3} borderRadius="50%"  className={styles.gayab}>
             <FaInstagram />
           </Button>
           <Button
@@ -46,15 +47,16 @@ function Footer() {
             bg="rgb(34, 26, 41)"
             p={3}
             borderRadius="50%"
+            className={styles.gayab}
           >
             <FaTwitter />
           </Button>
-          <Button color="red.500" bg="rgb(34, 26, 41)" p={3} borderRadius="50%">
+          <Button color="red.500" bg="rgb(34, 26, 41)" p={3} borderRadius="50%"  className={styles.gayab}>
             <FaYoutube />
           </Button>
         </HStack>
       </HStack>
-      <HStack my={7} gap={4} color="rgb(111, 111, 111)" fontSize="12px">
+      <HStack my={7} gap={[1,2,3]} color="rgb(111, 111, 111)" fontSize="12px">
         <Box className={styles.footerHover} borderRight="1px solid gray" pr={7}>
           About us
         </Box>

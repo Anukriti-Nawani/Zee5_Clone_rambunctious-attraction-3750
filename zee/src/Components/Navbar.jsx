@@ -119,6 +119,7 @@ function Navbar() {
 
       <Spacer />
       <Input
+      className={styles.search}
         w="370px"
         color="white"
         focusBorderColor="purple.500"
@@ -138,9 +139,23 @@ function Navbar() {
           </NavLink>
         )}
 
-        <NavLink className={styles.buy} to="/buyplan" end>
+        {/* <NavLink className={styles.buy} to="/buyplan" end>
           BUY PLAN
-        </NavLink>
+        </NavLink> */}
+
+
+{
+  isLogin ? (<NavLink className={styles.buy} to="/buyplan" end>
+  BUY PLAN
+</NavLink>
+  ):(
+    <NavLink className={styles.nav} to="/login" end>
+            BUY PLAN
+          </NavLink>
+  )
+}
+
+
 
         <Button ref={btnRef} onClick={onOpen} className={styles.butt}>
           <FaBars className={styles.icon} />
