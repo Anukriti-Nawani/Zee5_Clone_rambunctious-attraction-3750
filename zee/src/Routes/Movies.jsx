@@ -37,7 +37,7 @@ function Movies() {
         <ChevronRightIcon w={6} h={6} color="white" fontWeight="bold" />
       </Text>
       <Text className={styles.latestTen} width="26%">
-        Exclusive Movies On ZEE5
+        
       </Text>
 
       <div className={styles.outer}>
