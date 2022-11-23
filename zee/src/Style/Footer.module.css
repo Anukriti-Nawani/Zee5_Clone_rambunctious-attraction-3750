@@ -1,0 +1,17 @@
+.footer {
+    cursor: pointer;
+  }
+  
+  .footerHover:hover {
+    color: rgb(131, 48, 198);
+    cursor: pointer;
+  }
+ 
+
+  @media screen and (max-width:550px) {
+    .gayab {
+   display: none;
+      /* border: 1px solid red; */
+    }
+  
+  }
